@@ -1,0 +1,40 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 110vh;
+}
+
+.wrapper {
+  max-width: 134rem;
+  margin: 0 auto;
+}
+
+
+
+
+/* HEADER  */
+.header .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Убираем стандартный маркер Chrome */
+details summary::-webkit-details-marker {
+  display: none;
+}
+/* Убираем стандартный маркер Firefox */
+details > summary {
+  list-style: none;
+}
+
+summary {
+  cursor: pointer;
+}
