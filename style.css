@@ -276,7 +276,7 @@ details > summary {
   font-family: "Work Sans", sans-serif;
   font-size: 8.1rem;
   line-height: 1.23;
-  letter-spacing: 18.9844px;
+  letter-spacing: 1.9rem;
   color: #ffffff;
 }
 
@@ -476,15 +476,11 @@ details > summary {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   transition: all 0.4s;
-
 }
 .gallery__item {
   scroll-snap-align: start;
   width: 80vw;
   height: 65vh;
-  transform-origin: center center;
-  transform: scale(1);
-  transition: transform 0.5s;
 }
 .gallery__btn-left {
   transform: rotate(180deg);
