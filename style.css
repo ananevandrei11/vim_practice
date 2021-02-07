@@ -25,7 +25,7 @@ body {
 img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -72,7 +72,7 @@ details > summary {
 }
 
 .menu__btn img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .menu__nav {
@@ -106,6 +106,9 @@ details > summary {
 .logo {
   width: 5.9rem;
   height: 3.9rem;
+}
+.header__logo-img {
+  object-fit: contain;
 }
 
 /* TOP BANNER  */
@@ -167,6 +170,7 @@ details > summary {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4a4a4a", endColorstr="#ffffff", GradientType=1);
 }
 .potted {
+  margin-bottom: 23rem;
   position: relative;
   padding-top: 14.1rem;
 }
@@ -257,7 +261,7 @@ details > summary {
 
 .carousel__article {
   max-width: 43.3rem;
-  margin-right: 40px;
+  margin-right: 4rem;
 }
 
 .carousel__title {
@@ -310,6 +314,107 @@ details > summary {
   background: transparent;
 }
 
+.vp {
+  min-height: 57.2rem;
+}
+.vp > .wrapper {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 1rem;
+  justify-content: center;
+}
+.vp__article {
+  display: flex;
+  justify-content: space-between;
+}
+.vp__article-vase {
+  max-width: 38rem;
+  flex-direction: row;
+}
+.vp__article-spot {
+  max-width: 57.2rem;
+  flex-direction: column;
+}
+.vp__info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 27rem;
+}
+.vp__title {
+  width: 3.3rem;
+  margin-right: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 4.8rem;
+  line-height: 1.15;
+  letter-spacing: 1rem;
+  word-break: break-all;
+}
+.vp__img {
+  min-height: 42rem;
+}
+.vp__text {
+  padding: 2.4rem 5rem;
+  text-align: center;
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.46;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.vp__btn {
+  width: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.vp__btn > span {
+  display: inline-block;
+}
+
+.vp__btn > span:nth-of-type(1) {
+  padding: 1.5rem 4.6rem;
+  font-family: "Koulen", sans-serif;
+  font-size: 3.6rem;
+  letter-spacing: 0.8rem;
+  color: var(--main-color, #7a797a);
+  text-align: center;
+  white-space: nowrap;
+  border: 3px solid #979797;
+}
+
+.vp__btn > span:nth-of-type(2) {
+  width: 6.7rem;
+  height: 3.1rem;
+}
+.footer {
+        position: relative;
+  height: 17.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__img {
+  position: absolute;
+  width: 30rem;
+  height: 27.8rem;
+  bottom: 0;
+  left: 5%;
+}
+.footer > .wrapper {
+  height: auto;
+}
+.footer__text {
+  font-family: "Mukta Vaani", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.46;
+  text-align: center;
+  color: #4a4a4a;
+}
 @media screen and (max-width: 1400px) {
   html {
     font-size: 9px;
@@ -359,6 +464,10 @@ details > summary {
     z-index: 10;
     right: 10%;
     filter: opacity(0.8);
+  }
+  .vp__article-spot,
+  .vp__article-vase {
+    max-width: 100%;
   }
 }
 
