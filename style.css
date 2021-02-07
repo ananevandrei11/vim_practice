@@ -34,6 +34,11 @@ button {
   cursor: pointer;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 .wrapper {
   max-width: 134rem;
   margin: 0 auto;
@@ -392,7 +397,7 @@ details > summary {
   height: 3.1rem;
 }
 .footer {
-        position: relative;
+  position: relative;
   height: 17.7rem;
   display: flex;
   justify-content: center;
@@ -414,6 +419,94 @@ details > summary {
   line-height: 1.46;
   text-align: center;
   color: #4a4a4a;
+}
+
+.popup {
+  position: fixed;
+  top: -999px;
+  bottom: 5%;
+  left: 2.5%;
+  right: 2.5%;
+  z-index: 200;
+  width: 95vw;
+  height: 90vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: all 0.4s;
+}
+
+.popup-open {
+  top: 5%;
+}
+
+.popup__btn-close {
+  position: absolute;
+  top: 2.5%;
+  right: 2.5%;
+  font-size: 25px;
+  color: #ffffff;
+  border: none;
+  background-color: transparent;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+.gallery__btn {
+  display: none;
+  width: 3.2rem;
+  height: 6.6rem;
+  border: none;
+  background: transparent;
+}
+.gallery__content {
+  margin: 0 auto;
+  width: 80%;
+  overflow: hidden;
+}
+.gallery__list {
+  width: 9999px;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  transition: all 0.4s;
+
+}
+.gallery__item {
+  scroll-snap-align: start;
+  width: 80vw;
+  height: 65vh;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+.gallery__btn-left {
+  transform: rotate(180deg);
+}
+.gallery__nav {
+  margin-top: 3rem;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.gallery__nav-list {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.gallery__nav-link {
+  display: inline-block;
+  width: 7.5rem;
+  height: 5rem;
+  font-size: 2.4rem;
+  color: #ffffff;
 }
 @media screen and (max-width: 1400px) {
   html {
