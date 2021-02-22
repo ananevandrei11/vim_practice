@@ -1,46 +1,68 @@
+"нумерация строк и подсветка
 set number
 syntax on
+
+"отступы при нажатии TAB
 set expandtab
+set smarttab
 set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+"отсуп между левой частью окна
+set foldcolumn=2
+
+"стилизация поиска
 set hlsearch
 set incsearch
+set ignorecase
+set smartcase
+
+"подсветка выделения строки
 set cursorline
+
+"отключение звука
 set noerrorbells
+set novisualbell
 set vb t_vb=
 
 " BEGIN служебные файлы
-set nobackup " отключение backup file
-set noswapfile " отключение swap   file
-set noundofile  " отключение undo   file
+"set nobackup " отключение backup file
+"set noswapfile " отключение swap   file
+"set noundofile  " отключение undo   file
 set backupdir=~/.vim/vimtmp
 set directory=~/.vim/vimtmp
 set undodir=~/.vim/vimtmp
 " END служебные файлы
 
 call plug#begin('~/.vim/plugged')
-
-"Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-"Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
-Plug 'christoomey/vim-tmux-navigator'
-"Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"TREE
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-"Plug 'scrooloose/nerdcommenter'
+"SEARCH
+Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
+"NAVIGATION TMUX
+Plug 'christoomey/vim-tmux-navigator'
+"COLOR ICONS
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
-Plug 'vwxyutarooo/nerdtree-devicons-syntax'
+"COLORSHEME
 Plug 'ErichDonGubler/vim-sublime-monokai'
+"AUTO ADD SYNTAX
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"EMMET
 Plug 'mattn/emmet-vim'
+"PRETTIER
 Plug 'prettier/vim-prettier', {
    \ 'do': 'npm install',
+   \ 'branch': 'release/0.x',
    \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+"RAINBOW COLOR BRACETS
+Plug 'luochen1990/rainbow'
+"JS LIGHT
+Plug 'jelera/vim-javascript-syntax'
 
-" Initialize plugin system
 call plug#end()
-"prettier
-let g:prettier#config#tab_width = '2'
+
 "mappings
 map <C-n> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
@@ -48,8 +70,8 @@ nmap ++ <plug>NERDCommenterToggle
 let g:NERDTreeGitStatusWithFlags = 1
 let NERDTreeShowHidden=1
 
-"color
-colorscheme sublimemonokai
+"prettier
+let g:prettier#config#tab_width = '2'
 
 " coc config
 let g:coc_global_extensions = [
@@ -63,6 +85,9 @@ let g:coc_global_extensions = [
   \ 'coc-phpls',
   \ 'coc-css',
   \ ]
+
+"color
+colorscheme sublimemonokai
 
 "icons color
 let s:colors = 
@@ -84,3 +109,7 @@ let s:colors =
   \ 'white'       : "FFFFFF"
   \ }
 
+"color for bracets
+let g:rainbow_active = 1
+
+let g:airline_powerline_fonts = 1
